@@ -1,0 +1,15 @@
+plugins {
+    id 'java-library'
+    id 'war'
+}
+
+repositories {
+}
+
+dependencies {
+    compileOnly group: 'org.glassfish.jersey.containers', name: 'jersey-container-servlet', version: '2.8'
+    compileOnly group: 'javax', name: 'javaee-api', version: '7.0'
+}
+
+targetCompatibility = 1.8
+sourceCompatibility = 1.8

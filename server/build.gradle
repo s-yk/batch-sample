@@ -1,0 +1,20 @@
+plugins {
+    id 'application'
+}
+
+repositories {
+    jcenter()
+}
+
+dependencies {
+    implementation 'fish.payara.extras:payara-micro:5.191'
+}
+
+mainClassName = 'server.App'
+
+tasks.withType(JavaExec) {
+    args "${rootDir}/batch/build/libs/batch.war"
+}
+
+targetCompatibility = 1.8
+sourceCompatibility = 1.8
